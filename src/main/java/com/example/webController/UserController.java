@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.webController.dto.EmployeeInfoDto;
+
 import java.util.List;
 
 @RestController
@@ -22,8 +24,8 @@ public class UserController {
    }
 
     @GetMapping("/all")
-     public ResponseEntity<List<Employee>> getAllEmployee(){
-        List<Employee>employees=empUse.getAll();
+     public ResponseEntity<List<EmployeeInfoDto>> getAllEmployee(){
+        List<EmployeeInfoDto>employees=empUse.getAll();
          return ResponseEntity.ok(employees);
      }
  
